@@ -1,0 +1,1967 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f6ef">
+  <title>Sea Moss Orgánicos — Bienestar que viene del mar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --ink: #183d35;
+      --green: #315b45;
+      --moss: #71845b;
+      --lime: #d9e7b4;
+      --cream: #f8f6ef;
+      --paper: #fffefa;
+      --orange: #d78352;
+      --muted: #66716a;
+      --line: #e8e7dd;
+      --serif: Georgia, 'Times New Roman', serif;
+      --sans: 'DM Sans', sans-serif;
+      --display: Manrope, sans-serif
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.55
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    .wrap {
+      width: min(1180px, calc(100% - 48px));
+      margin: auto
+    }
+
+    .announcement {
+      background: var(--ink);
+      color: #f8f6ef;
+      text-align: center;
+      padding: 9px 16px;
+      font-size: 11px;
+      letter-spacing: .09em;
+      text-transform: uppercase
+    }
+
+    .announcement b {
+      color: var(--lime);
+      font-weight: 700
+    }
+
+    .header {
+      height: 76px;
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #e9e7df;
+      position: sticky;
+      top: 0;
+      z-index: 20
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 15px;
+      letter-spacing: -.06em
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      background: var(--green);
+      border-radius: 50% 50% 45% 8%;
+      transform: rotate(-42deg);
+      position: relative
+    }
+
+    .brand-mark:after {
+      content: '';
+      position: absolute;
+      left: 17px;
+      top: 6px;
+      width: 1px;
+      height: 24px;
+      background: #dce5c8;
+      transform: rotate(42deg)
+    }
+
+    .brand-name {
+      line-height: 1.05
+    }
+
+    .brand-name small {
+      font-family: var(--sans);
+      display: block;
+      letter-spacing: .16em;
+      font-size: 8px;
+      font-weight: 600;
+      margin-top: 4px;
+      color: var(--moss)
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #445a4e
+    }
+
+    .nav a:hover {
+      color: var(--orange)
+    }
+
+    .head-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center
+    }
+
+    .icon-btn {
+      border: 1px solid var(--line);
+      background: transparent;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      color: var(--ink);
+      display: grid;
+      place-items: center;
+      position: relative
+    }
+
+    .cart-count {
+      position: absolute;
+      right: -4px;
+      top: -4px;
+      background: var(--orange);
+      color: #fff;
+      font-size: 9px;
+      border-radius: 50%;
+      min-width: 16px;
+      height: 16px;
+      display: grid;
+      place-items: center
+    }
+
+    .mobile-menu {
+      display: none
+    }
+
+    .hero {
+      padding: 32px 0 75px
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 530px;
+      background: #e9eddf;
+      border-radius: 5px;
+      overflow: hidden
+    }
+
+    .hero-copy {
+      padding: 64px 8% 55px 11%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      position: relative
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--moss);
+      display: flex;
+      gap: 9px;
+      align-items: center
+    }
+
+    .eyebrow:before {
+      content: '';
+      width: 22px;
+      height: 1px;
+      background: var(--orange)
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0
+    }
+
+    h1 {
+      font: 500 clamp(44px, 5vw, 68px)/1.02 var(--serif);
+      letter-spacing: -.045em;
+      margin: 20px 0
+    }
+
+    .hero-copy p {
+      max-width: 390px;
+      color: #56665b;
+      font-size: 15px;
+      line-height: 1.8;
+      margin: 0 0 27px
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 11px;
+      background: var(--ink);
+      color: white;
+      border: 0;
+      border-radius: 2px;
+      padding: 15px 22px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      transition: .2s
+    }
+
+    .button:hover {
+      background: #2f654b;
+      transform: translateY(-1px)
+    }
+
+    .button.light {
+      background: transparent;
+      border: 1px solid #b3c0ac;
+      color: var(--ink)
+    }
+
+    .hero-note {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #536252;
+      font-size: 10px;
+      margin-top: 23px
+    }
+
+    .hero-note span {
+      color: #c17a50;
+      font-size: 17px
+    }
+
+    .hero-art {
+      position: relative;
+      min-height: 500px;
+      background: radial-gradient(ellipse at 53% 51%, #f0e6d1 0 22%, transparent 23%), linear-gradient(145deg, #d3dfc5, #b2c49e 62%, #859d77);
+      overflow: hidden;
+      display: grid;
+      place-items: center
+    }
+
+    .hero-art:before {
+      content: '';
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      border: 1px solid rgba(255, 255, 255, .5);
+      border-radius: 50%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%)
+    }
+
+    .hero-art:after {
+      content: '';
+      position: absolute;
+      width: 380px;
+      height: 130px;
+      border-radius: 50%;
+      background: rgba(37, 57, 35, .16);
+      filter: blur(22px);
+      bottom: 43px;
+      left: 50%;
+      transform: translateX(-50%)
+    }
+
+    .sun {
+      position: absolute;
+      right: 8%;
+      top: 10%;
+      width: 85px;
+      height: 85px;
+      background: #f4e6be;
+      border-radius: 50%;
+      opacity: .65
+    }
+
+    .leaf {
+      position: absolute;
+      width: 92px;
+      height: 180px;
+      border-radius: 100% 0 100% 0;
+      background: linear-gradient(120deg, #627b53, #9aab79);
+      opacity: .8;
+      transform: rotate(42deg)
+    }
+
+    .leaf.l1 {
+      left: 9%;
+      bottom: 6%
+    }
+
+    .leaf.l2 {
+      right: 5%;
+      bottom: 10%;
+      transform: rotate(-35deg) scale(.8)
+    }
+
+    .jar {
+      position: relative;
+      z-index: 2;
+      width: 193px;
+      height: 275px;
+      filter: drop-shadow(0 19px 16px rgba(29, 52, 35, .22));
+      transform: rotate(-3deg)
+    }
+
+    .jar-lid {
+      position: absolute;
+      top: 0;
+      left: 28px;
+      width: 137px;
+      height: 33px;
+      border-radius: 5px 5px 3px 3px;
+      background: linear-gradient(90deg, #a9a58d, #ddd5b9 25%, #aaa48c 80%);
+      box-shadow: inset 0 5px 4px #eee7d1
+    }
+
+    .jar-glass {
+      position: absolute;
+      top: 25px;
+      left: 11px;
+      width: 171px;
+      height: 226px;
+      border-radius: 24px 24px 39px 39px;
+      background: linear-gradient(90deg, rgba(225, 223, 196, .78), rgba(255, 248, 223, .95) 23%, rgba(235, 224, 190, .85) 78%, rgba(196, 192, 162, .9));
+      border: 1px solid rgba(255, 255, 255, .8);
+      overflow: hidden
+    }
+
+    .gel {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 76%;
+      background: linear-gradient(90deg, #b0ad7d, #d0c99c 20%, #b3aa75 78%, #928e62);
+      opacity: .84
+    }
+
+    .label {
+      position: absolute;
+      top: 68px;
+      left: 23px;
+      width: 125px;
+      height: 95px;
+      background: #f7f4e6;
+      text-align: center;
+      padding: 12px 6px 7px;
+      color: var(--ink);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 1px 3px #7772
+    }
+
+    .label-mark {
+      width: 15px;
+      height: 15px;
+      border-radius: 60% 0 60% 0;
+      background: var(--moss);
+      transform: rotate(-35deg);
+      margin-bottom: 6px
+    }
+
+    .label b {
+      font: 700 10px/1.1 var(--display);
+      letter-spacing: -.04em
+    }
+
+    .label small {
+      font-size: 6px;
+      letter-spacing: .15em;
+      margin-top: 5px
+    }
+
+    .label i {
+      font: italic 8px var(--serif);
+      margin-top: 7px
+    }
+
+    .hero-sticker {
+      position: absolute;
+      right: 12%;
+      bottom: 17%;
+      z-index: 4;
+      background: var(--paper);
+      border-radius: 50%;
+      width: 94px;
+      height: 94px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      font: italic 13px/1.1 var(--serif);
+      box-shadow: 0 4px 22px #4a5e3b22;
+      transform: rotate(10deg)
+    }
+
+    .hero-sticker span {
+      font: 700 8px var(--sans);
+      letter-spacing: .12em;
+      text-transform: uppercase
+    }
+
+    .art-caption {
+      position: absolute;
+      bottom: 19px;
+      left: 22px;
+      z-index: 3;
+      color: #fff;
+      font-size: 9px;
+      letter-spacing: .1em;
+      text-transform: uppercase
+    }
+
+    .trust-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 20px 0 45px;
+      border-bottom: 1px solid var(--line)
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      border-right: 1px solid var(--line);
+      font-size: 11px;
+      font-weight: 600
+    }
+
+    .trust-item:last-child {
+      border: 0
+    }
+
+    .trust-icon {
+      color: var(--moss);
+      font-size: 21px
+    }
+
+    .trust-item small {
+      display: block;
+      color: #7b8179;
+      font-size: 9px;
+      font-weight: 400
+    }
+
+    .section {
+      padding: 92px 0
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 590px;
+      margin: 0 auto 42px
+    }
+
+    .section-head .eyebrow {
+      justify-content: center
+    }
+
+    .section-head h2 {
+      font: 500 clamp(34px, 4vw, 48px)/1.1 var(--serif);
+      letter-spacing: -.04em;
+      margin: 13px 0
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+      margin: 0
+    }
+
+    .product-layout {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 9%;
+      align-items: center
+    }
+
+    .product-visual {
+      min-height: 450px;
+      background: #e9eddf;
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden
+    }
+
+    .product-visual .jar {
+      transform: scale(1.25) rotate(2deg)
+    }
+
+    .product-visual:before {
+      content: '';
+      position: absolute;
+      width: 335px;
+      height: 335px;
+      border-radius: 50%;
+      background: #d8dfc9
+    }
+
+    .product-visual .leaf {
+      z-index: 1;
+      opacity: .55
+    }
+
+    .product-info {
+      padding: 8px 0
+    }
+
+    .stars {
+      color: #c27d4c;
+      font-size: 12px;
+      letter-spacing: .1em
+    }
+
+    .stars span {
+      color: #6a746a;
+      letter-spacing: 0;
+      font-size: 10px;
+      margin-left: 8px
+    }
+
+    .product-info h2 {
+      font: 500 45px/1.05 var(--serif);
+      letter-spacing: -.04em;
+      margin: 10px 0
+    }
+
+    .product-info .subline {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 18px
+    }
+
+    .price-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 19px 0 7px
+    }
+
+    .price {
+      font: 600 25px var(--display)
+    }
+
+    .old-price {
+      font-size: 13px;
+      text-decoration: line-through;
+      color: #95988d
+    }
+
+    .sale {
+      background: #e5a17b;
+      color: white;
+      padding: 4px 8px;
+      font-size: 9px;
+      letter-spacing: .08em;
+      font-weight: 700
+    }
+
+    .product-info .short-desc {
+      color: #59665c;
+      font-size: 13px;
+      line-height: 1.8;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 20px;
+      margin-bottom: 20px
+    }
+
+    .option-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-weight: 700;
+      margin-bottom: 8px
+    }
+
+    .size-options {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 17px
+    }
+
+    .size-option {
+      border: 1px solid var(--line);
+      padding: 10px;
+      background: transparent;
+      text-align: center;
+      color: var(--ink);
+      font-size: 10px
+    }
+
+    .size-option.active {
+      border: 1px solid var(--green);
+      background: #eff1e7
+    }
+
+    .size-option b {
+      display: block;
+      font-size: 12px;
+      margin-bottom: 2px
+    }
+
+    .quantity-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 17px 0
+    }
+
+    .quantity {
+      height: 42px;
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: center
+    }
+
+    .quantity button {
+      border: 0;
+      background: transparent;
+      width: 34px;
+      height: 40px;
+      color: var(--ink)
+    }
+
+    .quantity output {
+      min-width: 25px;
+      text-align: center;
+      font-size: 12px
+    }
+
+    .add-button {
+      flex: 1;
+      height: 45px
+    }
+
+    .microcopy {
+      text-align: center;
+      color: #73786f;
+      font-size: 9px;
+      margin: 11px 0 0
+    }
+
+    .product-bullets {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 11px;
+      margin: 19px 0 0;
+      padding: 0;
+      list-style: none;
+      color: #59665c;
+      font-size: 10px
+    }
+
+    .product-bullets li:before {
+      content: '✓';
+      color: var(--moss);
+      font-weight: 700;
+      margin-right: 7px
+    }
+
+    .story {
+      background: var(--ink);
+      color: #f5f3e8;
+      padding: 90px 0
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10%;
+      align-items: center
+    }
+
+    .story .eyebrow {
+      color: #b7c497
+    }
+
+    .story h2 {
+      font: 500 clamp(36px, 4vw, 53px)/1.06 var(--serif);
+      letter-spacing: -.04em;
+      margin: 15px 0 19px
+    }
+
+    .story p {
+      font-size: 13px;
+      line-height: 1.9;
+      color: #d0d7c8;
+      max-width: 475px
+    }
+
+    .story .button {
+      background: #d9e3c3;
+      color: var(--ink);
+      margin-top: 8px
+    }
+
+    .story-art {
+      height: 375px;
+      position: relative;
+      background: linear-gradient(135deg, #627a59, #a6b68d);
+      display: grid;
+      place-items: center;
+      overflow: hidden
+    }
+
+    .story-art:before,
+    .story-art:after {
+      content: '';
+      position: absolute;
+      width: 230px;
+      height: 340px;
+      background: linear-gradient(90deg, #536c4e, #a1b28c);
+      border-radius: 90% 0 90% 0;
+      transform: rotate(44deg);
+      left: 6%;
+      bottom: -36%
+    }
+
+    .story-art:after {
+      left: auto;
+      right: 5%;
+      bottom: -30%;
+      transform: rotate(-47deg)
+    }
+
+    .story-quote {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: #f5f3e8;
+      font: italic 29px/1.2 var(--serif);
+      max-width: 280px
+    }
+
+    .story-quote small {
+      display: block;
+      font: 700 8px var(--sans);
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      margin-top: 20px;
+      color: #dce7c5
+    }
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px
+    }
+
+    .benefit {
+      padding: 27px 26px 30px;
+      background: #eeeee3;
+      min-height: 186px
+    }
+
+    .benefit-icon {
+      width: 40px;
+      height: 40px;
+      border: 1px solid #cad2bd;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--moss);
+      font-size: 18px;
+      margin-bottom: 20px
+    }
+
+    .benefit h3 {
+      font: 500 20px var(--serif);
+      margin: 0 0 8px
+    }
+
+    .benefit p {
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.75;
+      margin: 0
+    }
+
+    .center-cta {
+      text-align: center;
+      margin-top: 30px
+    }
+
+    .center-cta small {
+      display: block;
+      font-size: 9px;
+      color: var(--muted);
+      margin-top: 10px
+    }
+
+    .products-section {
+      background: #eeeee3
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px
+    }
+
+    .product-card {
+      background: var(--paper);
+      padding: 14px 14px 20px;
+      position: relative
+    }
+
+    .product-card-art {
+      height: 245px;
+      background: #e7ebdd;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      position: relative
+    }
+
+    .product-card:nth-child(2) .product-card-art {
+      background: #eee6d8
+    }
+
+    .product-card:nth-child(3) .product-card-art {
+      background: #e5e9df
+    }
+
+    .product-card-art .jar {
+      transform: scale(.76) rotate(-4deg)
+    }
+
+    .product-card:nth-child(2) .jar {
+      filter: hue-rotate(35deg) saturate(.8)
+    }
+
+    .product-card:nth-child(3) .jar {
+      filter: hue-rotate(150deg) saturate(.8)
+    }
+
+    .tag {
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      background: var(--ink);
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 8px;
+      letter-spacing: .1em;
+      padding: 6px 9px
+    }
+
+    .product-card h3 {
+      font: 500 20px var(--serif);
+      margin: 17px 0 4px
+    }
+
+    .card-rating {
+      font-size: 10px;
+      color: #bd774d
+    }
+
+    .card-rating span {
+      color: #727970
+    }
+
+    .card-price {
+      font-size: 13px;
+      font-weight: 700;
+      margin-top: 10px
+    }
+
+    .card-price del {
+      font-weight: 400;
+      color: #999;
+      margin-left: 7px
+    }
+
+    .card-link {
+      float: right;
+      font-size: 9px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      border-bottom: 1px solid #b4bdaa;
+      padding-bottom: 3px;
+      margin-top: -4px
+    }
+
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      counter-reset: steps
+    }
+
+    .step {
+      border-top: 1px solid #cbd1c4;
+      padding-top: 17px;
+      counter-increment: steps
+    }
+
+    .step-num {
+      font: italic 28px var(--serif);
+      color: var(--orange)
+    }
+
+    .step h3 {
+      font: 500 22px var(--serif);
+      margin: 15px 0 6px
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7
+    }
+
+    .step-visual {
+      height: 128px;
+      background: #e8ebdf;
+      margin-top: 16px;
+      display: grid;
+      place-items: center;
+      color: var(--moss);
+      font-size: 36px
+    }
+
+    .reviews {
+      background: #e7eadf
+    }
+
+    .review-summary {
+      text-align: center;
+      margin-bottom: 28px
+    }
+
+    .review-summary strong {
+      font: 500 44px var(--serif)
+    }
+
+    .review-summary .stars {
+      font-size: 15px
+    }
+
+    .review-summary small {
+      display: block;
+      color: var(--muted);
+      font-size: 10px;
+      margin-top: 5px
+    }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px
+    }
+
+    .review {
+      background: var(--paper);
+      padding: 24px;
+      min-height: 190px
+    }
+
+    .review .stars {
+      font-size: 10px
+    }
+
+    .review blockquote {
+      font: italic 18px/1.4 var(--serif);
+      margin: 13px 0
+    }
+
+    .review p {
+      font-size: 11px;
+      color: var(--muted);
+      margin: 0
+    }
+
+    .review em {
+      color: var(--moss);
+      font-style: normal;
+      font-weight: 700;
+      font-size: 9px;
+      margin-left: 7px
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: .7fr 1.3fr;
+      gap: 10%
+    }
+
+    .faq-title h2 {
+      font: 500 43px/1.08 var(--serif);
+      letter-spacing: -.04em
+    }
+
+    .faq-title p {
+      font-size: 12px;
+      line-height: 1.8;
+      color: var(--muted)
+    }
+
+    .faq-list details {
+      border-bottom: 1px solid var(--line);
+      padding: 17px 0
+    }
+
+    .faq-list summary {
+      list-style: none;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px
+    }
+
+    .faq-list summary::-webkit-details-marker {
+      display: none
+    }
+
+    .faq-list summary:after {
+      content: '+';
+      font-size: 17px;
+      color: var(--moss);
+      font-weight: 400
+    }
+
+    .faq-list details[open] summary:after {
+      content: '−'
+    }
+
+    .faq-list details p {
+      font-size: 11px;
+      line-height: 1.8;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 12px 0 1px
+    }
+
+    .newsletter {
+      background: #dce5ce;
+      padding: 54px 0
+    }
+
+    .newsletter-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px
+    }
+
+    .newsletter h2 {
+      font: 500 31px var(--serif);
+      margin: 0 0 4px
+    }
+
+    .newsletter p {
+      font-size: 11px;
+      color: #5c6a5c;
+      margin: 0
+    }
+
+    .email-form {
+      display: flex;
+      width: min(420px, 50%);
+      border-bottom: 1px solid #77866d
+    }
+
+    .email-form input {
+      flex: 1;
+      border: 0;
+      background: transparent;
+      padding: 12px 0;
+      font: inherit;
+      font-size: 11px;
+      outline: 0
+    }
+
+    .email-form button {
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+      font-size: 9px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-weight: 700
+    }
+
+    footer {
+      background: var(--ink);
+      color: #f1f0e8;
+      padding: 48px 0 20px
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 35px;
+      padding-bottom: 40px
+    }
+
+    .footer-brand .brand {
+      color: #f3f1e8
+    }
+
+    .footer-brand p {
+      font-size: 10px;
+      line-height: 1.8;
+      color: #c6cdbf;
+      max-width: 240px;
+      margin-top: 17px
+    }
+
+    .footer-col b {
+      font-size: 9px;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      color: #dbe5c7
+    }
+
+    .footer-col a {
+      display: block;
+      font-size: 10px;
+      color: #c6cdbf;
+      margin-top: 12px
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #ffffff25;
+      padding-top: 17px;
+      display: flex;
+      justify-content: space-between;
+      color: #b7c0b2;
+      font-size: 9px
+    }
+
+    .disclaimer {
+      max-width: 620px
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--ink);
+      color: white;
+      padding: 13px 19px;
+      font-size: 11px;
+      z-index: 50;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: .25s;
+      pointer-events: none
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: none
+    }
+
+    .mobile-bar {
+      display: none
+    }
+
+    @media(max-width:800px) {
+      .wrap {
+        width: min(100% - 32px, 600px)
+      }
+
+      .nav {
+        gap: 16px
+      }
+
+      .nav a:nth-child(2),
+      .nav a:nth-child(3) {
+        display: none
+      }
+
+      .hero {
+        padding: 17px 0 50px
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr
+      }
+
+      .hero-copy {
+        padding: 45px 9% 30px
+      }
+
+      .hero-art {
+        min-height: 385px
+      }
+
+      .hero-copy h1 {
+        font-size: 52px
+      }
+
+      .trust-strip {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 20px;
+        padding-bottom: 32px
+      }
+
+      .trust-item:nth-child(2) {
+        border: 0
+      }
+
+      .product-layout {
+        gap: 30px
+      }
+
+      .product-visual {
+        min-height: 380px
+      }
+
+      .product-info h2 {
+        font-size: 37px
+      }
+
+      .story-grid {
+        gap: 6%
+      }
+
+      .story-art {
+        height: 310px
+      }
+
+      .section {
+        padding: 70px 0
+      }
+
+      .benefit-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .products {
+        gap: 10px
+      }
+
+      .product-card-art {
+        height: 190px
+      }
+
+      .product-card-art .jar {
+        transform: scale(.62)
+      }
+
+      .faq-grid {
+        gap: 6%
+      }
+
+      .footer-grid {
+        grid-template-columns: 1.3fr 1fr 1fr
+      }
+
+      .footer-col:last-child {
+        display: none
+      }
+    }
+
+    @media(max-width:560px) {
+      body {
+        font-size: 14px
+      }
+
+      .announcement {
+        font-size: 9px;
+        padding: 8px
+      }
+
+      .header {
+        height: 63px
+      }
+
+      .nav {
+        display: none
+      }
+
+      .mobile-menu {
+        display: grid
+      }
+
+      .brand {
+        font-size: 13px
+      }
+
+      .head-actions {
+        gap: 7px
+      }
+
+      .hero-copy {
+        padding: 38px 7% 27px
+      }
+
+      .hero-copy h1 {
+        font-size: 47px
+      }
+
+      .hero-copy p {
+        font-size: 13px
+      }
+
+      .hero-art {
+        min-height: 330px
+      }
+
+      .hero-art .jar {
+        transform: scale(.84) rotate(-3deg)
+      }
+
+      .hero-art:before {
+        width: 255px;
+        height: 255px
+      }
+
+      .hero-sticker {
+        right: 8%;
+        bottom: 13%;
+        width: 77px;
+        height: 77px;
+        font-size: 11px
+      }
+
+      .trust-item {
+        justify-content: flex-start;
+        font-size: 10px
+      }
+
+      .trust-item small {
+        font-size: 8px
+      }
+
+      .trust-icon {
+        font-size: 17px
+      }
+
+      .product-layout {
+        grid-template-columns: 1fr;
+        gap: 25px
+      }
+
+      .product-visual {
+        min-height: 330px
+      }
+
+      .product-visual .jar {
+        transform: scale(1.05)
+      }
+
+      .product-info h2 {
+        font-size: 36px
+      }
+
+      .section {
+        padding: 60px 0
+      }
+
+      .section-head {
+        margin-bottom: 28px
+      }
+
+      .section-head h2 {
+        font-size: 37px
+      }
+
+      .story {
+        padding: 61px 0
+      }
+
+      .story-grid {
+        grid-template-columns: 1fr;
+        gap: 30px
+      }
+
+      .story-art {
+        height: 260px;
+        grid-row: 1
+      }
+
+      .benefit-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 9px
+      }
+
+      .benefit {
+        padding: 19px 16px;
+        min-height: 178px
+      }
+
+      .benefit h3 {
+        font-size: 18px
+      }
+
+      .benefit p {
+        font-size: 10px
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+        gap: 12px
+      }
+
+      .product-card {
+        display: grid;
+        grid-template-columns: 130px 1fr;
+        column-gap: 15px;
+        align-items: center;
+        padding: 10px
+      }
+
+      .product-card-art {
+        grid-row: 1/5;
+        height: 140px
+      }
+
+      .product-card-art .jar {
+        transform: scale(.47)
+      }
+
+      .product-card h3 {
+        font-size: 17px;
+        margin: 0
+      }
+
+      .card-rating {
+        font-size: 9px
+      }
+
+      .card-link {
+        float: none;
+        margin: 6px 0 0
+      }
+
+      .card-price {
+        margin: 4px 0
+      }
+
+      .how-grid {
+        grid-template-columns: 1fr;
+        gap: 23px
+      }
+
+      .step {
+        display: grid;
+        grid-template-columns: 35px 1fr;
+        column-gap: 8px
+      }
+
+      .step-num {
+        grid-row: 1/4
+      }
+
+      .step h3 {
+        margin: 0
+      }
+
+      .step p {
+        margin: 3px 0
+      }
+
+      .step-visual {
+        display: none
+      }
+
+      .review-grid {
+        grid-template-columns: 1fr
+      }
+
+      .review {
+        min-height: 0
+      }
+
+      .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 15px
+      }
+
+      .faq-title h2 {
+        font-size: 37px;
+        margin-bottom: 10px
+      }
+
+      .newsletter-inner {
+        display: block
+      }
+
+      .newsletter h2 {
+        font-size: 27px
+      }
+
+      .email-form {
+        width: 100%;
+        margin-top: 20px
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 27px
+      }
+
+      .footer-brand {
+        grid-column: 1/-1
+      }
+
+      .footer-col:last-child {
+        display: block
+      }
+
+      .footer-bottom {
+        display: block;
+        line-height: 1.7
+      }
+
+      .mobile-bar {
+        position: fixed;
+        z-index: 18;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 16px;
+        background: #fffefa;
+        border-top: 1px solid var(--line);
+        box-shadow: 0 -4px 14px #183d3510
+      }
+
+      .mobile-bar span {
+        font: 600 14px var(--display)
+      }
+
+      .mobile-bar .button {
+        padding: 12px 16px;
+        font-size: 9px
+      }
+
+      .toast {
+        bottom: 73px
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement"><b>Envío gratis</b> en compras desde $200.000 · Hecho con cuidado en Colombia</div>
+  <header class="header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#inicio" aria-label="Sea Moss Orgánicos, inicio"><span class="brand-mark"></span><span
+          class="brand-name">SEA MOSS<small>ORGÁNICOS</small></span></a>
+      <nav class="nav"><a href="#productos">Productos</a><a href="#beneficios">Beneficios</a><a href="#historia">Nuestra
+          historia</a><a href="#faq">Preguntas</a></nav>
+      <div class="head-actions"><button class="icon-btn mobile-menu" aria-label="Abrir menú">☰</button><button
+          class="icon-btn" aria-label="Buscar">⌕</button><button class="icon-btn" id="cartButton"
+          aria-label="Carrito">♧<span class="cart-count" id="cartCount">0</span></button></div>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Bienestar de origen natural</div>
+          <h1>Un pequeño<br>ritual. Un gran<br><i>bienestar.</i></h1>
+          <p>Conoce el gel de Sea Moss Orgánicos: un alimento de origen marino, preparado en pequeños lotes para
+            acompañar tus días.</p><a href="#producto" class="button">Descubrir Sea Moss <span>→</span></a>
+          <div class="hero-note"><span>✳</span> Ingredientes sencillos · Preparación artesanal</div>
+        </div>
+        <div class="hero-art" aria-label="Frasco ilustrativo de Sea Moss Gel">
+          <div class="sun"></div>
+          <div class="leaf l1"></div>
+          <div class="leaf l2"></div>
+          <div class="jar">
+            <div class="jar-lid"></div>
+            <div class="jar-glass">
+              <div class="gel"></div>
+              <div class="label"><span class="label-mark"></span><b>SEA MOSS<br>ORGÁNICOS</b><small>GEL
+                  ORIGINAL</small><i>Musgo marino</i></div>
+            </div>
+          </div>
+          <div class="hero-sticker">Del mar<br><span>a tu rutina</span></div>
+          <div class="art-caption">Sea Moss Gel · Preparación artesanal</div>
+        </div>
+      </div>
+    </section>
+    <div class="wrap trust-strip">
+      <div class="trust-item"><span class="trust-icon">✿</span><span>Origen natural<small>Ingredientes
+            seleccionados</small></span></div>
+      <div class="trust-item"><span class="trust-icon">♧</span><span>Hecho en Colombia<small>Preparado en pequeños
+            lotes</small></span></div>
+      <div class="trust-item"><span class="trust-icon">↗</span><span>Envíos nacionales<small>Hasta la puerta de tu
+            casa</small></span></div>
+      <div class="trust-item"><span class="trust-icon">♡</span><span>Atención cercana<small>Estamos aquí para
+            ayudarte</small></span></div>
+    </div>
+    <section class="section" id="producto">
+      <div class="wrap product-layout">
+        <div class="product-visual">
+          <div class="leaf l1"></div>
+          <div class="leaf l2"></div>
+          <div class="jar">
+            <div class="jar-lid"></div>
+            <div class="jar-glass">
+              <div class="gel"></div>
+              <div class="label"><span class="label-mark"></span><b>SEA MOSS<br>ORGÁNICOS</b><small>GEL
+                  ORIGINAL</small><i>Musgo marino</i></div>
+            </div>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="stars">★★★★★ <span>Producto favorito</span></div>
+          <h2>Sea Moss Gel<br>Original</h2>
+          <div class="subline">Preparación artesanal · Presentación refrigerada</div>
+          <div class="price-row"><span class="price">$124.000</span><span class="old-price">$128.000</span><span
+              class="sale">AHORRA 3%</span></div>
+          <p class="short-desc">Una forma sencilla de incorporar sea moss a tu rutina diaria. Elaborado con musgo marino
+            y una preparación de sabor suave.</p>
+          <div class="option-label">Elige tu presentación</div>
+          <div class="size-options"><button class="size-option active"><b>1 frasco</b>Uso personal</button><button
+              class="size-option"><b>2 frascos</b>Más elegido</button><button class="size-option"><b>3 frascos</b>Para
+              compartir</button></div>
+          <div class="quantity-row">
+            <div class="quantity"><button id="minus" aria-label="Reducir cantidad">−</button><output
+                id="qty">1</output><button id="plus" aria-label="Aumentar cantidad">+</button></div><button
+              class="button add-button" id="addToCart">Agregar al carrito <span>→</span></button>
+          </div>
+          <div class="microcopy">Pago seguro · Envíos a todo Colombia · Precio en pesos colombianos</div>
+          <ul class="product-bullets">
+            <li>Preparado en pequeños lotes</li>
+            <li>Empaque cuidadoso</li>
+            <li>Conserva refrigerado</li>
+            <li>Atención por WhatsApp</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="story" id="historia">
+      <div class="wrap story-grid">
+        <div>
+          <div class="eyebrow">Del mar a tu mesa</div>
+          <h2>Un origen que se siente en cada cucharada.</h2>
+          <p>Seleccionamos musgo marino de las costas de Santa Lucía y lo preparamos cuidadosamente para llevarlo hasta
+            tu hogar. Creemos en los ingredientes simples, el trabajo consciente y los rituales que caben en la vida
+            real.</p>
+          <p>Cada lote se prepara con atención y se empaca pensando en el recorrido hasta tu puerta.</p><a
+            href="#productos" class="button">Conoce nuestros productos →</a>
+        </div>
+        <div class="story-art">
+          <div class="story-quote">“Cuidar de ti puede empezar con algo sencillo.”<small>SEA MOSS ORGÁNICOS</small>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="beneficios">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Una rutina más simple</div>
+          <h2>Lo bueno de volver a lo natural.</h2>
+          <p>El sea moss es un alga marina que puedes sumar a distintas preparaciones. Encuentra la forma que mejor se
+            adapta a tu día.</p>
+        </div>
+        <div class="benefit-grid">
+          <article class="benefit">
+            <div class="benefit-icon">◌</div>
+            <h3>Fácil de incorporar</h3>
+            <p>Disfrútalo solo o agrégalo a tus batidos, jugos y recetas favoritas.</p>
+          </article>
+          <article class="benefit">
+            <div class="benefit-icon">✳</div>
+            <h3>Un ingrediente versátil</h3>
+            <p>Su textura hace que sea sencillo mezclarlo en preparaciones frías o calientes.</p>
+          </article>
+          <article class="benefit">
+            <div class="benefit-icon">♧</div>
+            <h3>Origen marino</h3>
+            <p>Un alimento tradicional de las costas del Caribe que llega a tu mesa.</p>
+          </article>
+          <article class="benefit">
+            <div class="benefit-icon">❋</div>
+            <h3>Preparado con cuidado</h3>
+            <p>Elaboramos nuestros productos en lotes pequeños y con atención a cada detalle.</p>
+          </article>
+          <article class="benefit">
+            <div class="benefit-icon">♡</div>
+            <h3>A tu manera</h3>
+            <p>Añade una cucharada a la receta que ya hace parte de tu rutina.</p>
+          </article>
+          <article class="benefit">
+            <div class="benefit-icon">☼</div>
+            <h3>Un ritual cotidiano</h3>
+            <p>Pequeños hábitos que hacen más amable el momento de cuidarte.</p>
+          </article>
+        </div>
+        <div class="center-cta"><a class="button" href="#producto">Quiero probarlo →</a><small>La experiencia puede
+            variar según cada persona. Consulta con un profesional si tienes dudas sobre tu alimentación.</small></div>
+      </div>
+    </section>
+    <section class="section products-section" id="productos">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Encuentra tu favorito</div>
+          <h2>Sea Moss para cada rutina.</h2>
+          <p>Elige la combinación que más te guste y haz espacio para el mar en tu día.</p>
+        </div>
+        <div class="products">
+          <article class="product-card">
+            <div class="product-card-art"><span class="tag">Más vendido</span>
+              <div class="jar">
+                <div class="jar-lid"></div>
+                <div class="jar-glass">
+                  <div class="gel"></div>
+                  <div class="label"><span class="label-mark"></span><b>SEA MOSS<br>ORGÁNICOS</b><small>GEL
+                      ORIGINAL</small><i>Musgo marino</i></div>
+                </div>
+              </div>
+            </div>
+            <h3>Gel Original</h3>
+            <div class="card-rating">★★★★★ <span>Favorito de la comunidad</span></div>
+            <div class="card-price">$124.000 <del>$128.000</del></div><a class="card-link" href="#producto">Ver producto
+              →</a>
+          </article>
+          <article class="product-card">
+            <div class="product-card-art"><span class="tag">Mezcla especial</span>
+              <div class="jar">
+                <div class="jar-lid"></div>
+                <div class="jar-glass">
+                  <div class="gel"></div>
+                  <div class="label"><span class="label-mark"></span><b>SEA
+                      MOSS<br>ORGÁNICOS</b><small>BLADDERWRACK</small><i>Mezcla marina</i></div>
+                </div>
+              </div>
+            </div>
+            <h3>Gel + Bladderwrack</h3>
+            <div class="card-rating">★★★★★ <span>Una mezcla del mar</span></div>
+            <div class="card-price">$132.000 <del>$142.000</del></div><a class="card-link" href="#producto">Ver producto
+              →</a>
+          </article>
+          <article class="product-card">
+            <div class="product-card-art"><span class="tag">Color natural</span>
+              <div class="jar">
+                <div class="jar-lid"></div>
+                <div class="jar-glass">
+                  <div class="gel"></div>
+                  <div class="label"><span class="label-mark"></span><b>SEA MOSS<br>ORGÁNICOS</b><small>ESPIRULINA
+                      AZUL</small><i>Mezcla especial</i></div>
+                </div>
+              </div>
+            </div>
+            <h3>Gel + Espirulina azul</h3>
+            <div class="card-rating">★★★★★ <span>Una opción diferente</span></div>
+            <div class="card-price">$136.000 <del>$155.000</del></div><a class="card-link" href="#producto">Ver producto
+              →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Así de sencillo</div>
+          <h2>Hazlo parte de tu día.</h2>
+          <p>Disfruta Sea Moss Gel de la forma que más te guste.</p>
+        </div>
+        <div class="how-grid">
+          <article class="step">
+            <div class="step-num">01</div>
+            <h3>Abre y sirve</h3>
+            <p>Usa una cuchara limpia para servir la porción que prefieras.</p>
+            <div class="step-visual">◉</div>
+          </article>
+          <article class="step">
+            <div class="step-num">02</div>
+            <h3>Mezcla a tu gusto</h3>
+            <p>Añádelo a un batido, jugo, avena o a tu receta favorita.</p>
+            <div class="step-visual">✳</div>
+          </article>
+          <article class="step">
+            <div class="step-num">03</div>
+            <h3>Refrigera</h3>
+            <p>Mantén el frasco refrigerado y sigue las indicaciones de conservación del empaque.</p>
+            <div class="step-visual">❄</div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section reviews">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Historias de nuestra comunidad</div>
+          <h2>Palabras que nos inspiran.</h2>
+          <p>La confianza se construye con cada pedido y cada conversación.</p>
+        </div>
+        <div class="review-summary"><strong>4.9</strong>
+          <div class="stars">★★★★★</div><small>Opiniones de clientes · Muestra visual pendiente de conectar con reseñas
+            reales</small>
+        </div>
+        <div class="review-grid">
+          <article class="review">
+            <div class="stars">★★★★★</div>
+            <blockquote>“Me encanta agregarlo a mis batidos en la mañana. La textura queda muy bien.”</blockquote>
+            <p>Cliente de Sea Moss Orgánicos <em>Compra verificada*</em></p>
+          </article>
+          <article class="review">
+            <div class="stars">★★★★★</div>
+            <blockquote>“El pedido llegó muy bien empacado y la atención fue súper amable.”</blockquote>
+            <p>Cliente de Sea Moss Orgánicos <em>Compra verificada*</em></p>
+          </article>
+          <article class="review">
+            <div class="stars">★★★★★</div>
+            <blockquote>“Me gusta tenerlo a la mano para mis recetas. Ya pedí de nuevo.”</blockquote>
+            <p>Cliente de Sea Moss Orgánicos <em>Compra verificada*</em></p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="faq">
+      <div class="wrap faq-grid">
+        <div class="faq-title">
+          <div class="eyebrow">Preguntas frecuentes</div>
+          <h2>¿Tienes dudas?</h2>
+          <p>Te ayudamos a elegir y a disfrutar tu pedido con tranquilidad. Escríbenos si necesitas una mano.</p><a
+            class="button" href="https://wa.me/573000000000">Hablar con nosotros →</a>
+        </div>
+        <div class="faq-list">
+          <details open>
+            <summary>¿Qué es el sea moss?</summary>
+            <p>Sea moss, también conocido como musgo marino, es un alga roja que crece en zonas costeras. Nuestro
+              producto se prepara en forma de gel para que puedas incorporarlo fácilmente a distintas recetas.</p>
+          </details>
+          <details>
+            <summary>¿Cómo puedo consumirlo?</summary>
+            <p>Puedes añadirlo a batidos, jugos y otras preparaciones. Revisa las indicaciones de consumo y conservación
+              en el empaque.</p>
+          </details>
+          <details>
+            <summary>¿Cómo debo conservar el gel?</summary>
+            <p>Al ser un producto refrigerado, mantenlo en la nevera. Consulta el empaque para conocer las instrucciones
+              específicas y la fecha de consumo.</p>
+          </details>
+          <details>
+            <summary>¿Hacen envíos a todo Colombia?</summary>
+            <p>Enviamos a diferentes ciudades del país. El tiempo y costo de envío se confirman al finalizar la compra
+              según tu ubicación.</p>
+          </details>
+          <details>
+            <summary>¿Qué métodos de pago aceptan?</summary>
+            <p>Los métodos de pago disponibles se muestran al completar tu pedido en la tienda.</p>
+          </details>
+          <details>
+            <summary>¿Puedo consumirlo si tengo una condición de salud?</summary>
+            <p>Si estás embarazada, lactando, tomas medicamentos o tienes una condición de salud, consulta con un
+              profesional antes de incorporar nuevos alimentos a tu rutina.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+    <section class="newsletter">
+      <div class="wrap newsletter-inner">
+        <div>
+          <h2>Una nota del mar, de vez en cuando.</h2>
+          <p>Novedades, recetas e ideas para tu rutina. Sin llenar tu bandeja.</p>
+        </div>
+        <form class="email-form" id="emailForm"><input type="email" placeholder="Tu correo electrónico"
+            aria-label="Tu correo electrónico" required><button type="submit">Suscribirme →</button></form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand"><a class="brand" href="#inicio"><span class="brand-mark"></span><span
+              class="brand-name">SEA MOSS<small>ORGÁNICOS</small></span></a>
+          <p>Bienestar de origen marino, preparado con cuidado y enviado hasta tu hogar.</p>
+        </div>
+        <div class="footer-col"><b>Explora</b><a href="#productos">Productos</a><a href="#beneficios">Beneficios</a><a
+            href="#historia">Nuestra historia</a></div>
+        <div class="footer-col"><b>Te ayudamos</b><a href="#faq">Preguntas frecuentes</a><a href="#faq">Envíos y
+            entregas</a><a href="#faq">Contáctanos</a></div>
+        <div class="footer-col"><b>Información</b><a href="#">Política de privacidad</a><a href="#">Términos de
+            servicio</a><a href="#">Cambios y devoluciones</a></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Sea Moss Orgánicos · Colombia</span><span class="disclaimer">Este
+          prototipo es una propuesta visual. Reemplazar contenido, reseñas, información de producto y enlaces por datos
+          aprobados antes de publicar.</span></div>
+    </div>
+  </footer>
+  <div class="mobile-bar"><span>$124.000</span><a href="#producto" class="button">Comprar ahora →</a></div>
+  <div class="toast" id="toast" role="status">Añadido al carrito</div>
+  <script>
+    let qty = 1, cart = 0; const qtyOut = document.getElementById('qty'), toast = document.getElementById('toast');
+    document.getElementById('minus').addEventListener('click', () => { qty = Math.max(1, qty - 1); qtyOut.textContent = qty });
+    document.getElementById('plus').addEventListener('click', () => { qty++; qtyOut.textContent = qty });
+    document.querySelectorAll('.size-option').forEach(btn => btn.addEventListener('click', () => { document.querySelectorAll('.size-option').forEach(x => x.classList.remove('active')); btn.classList.add('active') }));
+    document.getElementById('addToCart').addEventListener('click', () => { cart += qty; document.getElementById('cartCount').textContent = cart; toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 2400) });
+    document.getElementById('cartButton').addEventListener('click', () => { toast.textContent = cart ? `Tienes ${cart} producto${cart === 1 ? '' : 's'} en tu carrito de demostración` : 'Tu carrito está vacío'; toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 2400) });
+    document.getElementById('emailForm').addEventListener('submit', e => { e.preventDefault(); toast.textContent = '¡Gracias! Formulario de demostración'; toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 2400); e.target.reset() });
+  </script>
+</body>
+
+</html>
